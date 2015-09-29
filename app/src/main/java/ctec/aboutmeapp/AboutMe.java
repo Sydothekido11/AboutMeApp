@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class AboutMe extends AppCompatActivity {
 
     private Button beginButton;
-    private TextView introText;
+    private TextView artText;
 
 
     @Override
@@ -20,7 +20,7 @@ public class AboutMe extends AppCompatActivity {
         setContentView(R.layout.activity_about_me);
 
         beginButton = (Button) findViewById(R.id.beginButton);
-        introText = (TextView) findViewById(R.id.introText);
+        artText = (TextView) findViewById(R.id.artText);
 
         setupListeners();
 
@@ -48,5 +48,22 @@ public class AboutMe extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+
+        private void changeVisibility()
+    {
+        artText.setVisibility(View.GONE);
     }
+
+        private void setupListeners()
+    {
+        beginButton.setOnClickListener(new View.onClickListener()
+        {
+            @Override
+            public void onClick(View buttonView)
+            {
+
+            }
+        });
+    }
+
 }
