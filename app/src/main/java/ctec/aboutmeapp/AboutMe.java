@@ -6,13 +6,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.view.View;
+
+
 
 
 public class AboutMe extends AppCompatActivity {
 
     private Button beginButton;
+    private Button animeButton;
+    private Button gameButton;
+    private Button jobButton;
+    private Button kpopButton;
     private TextView artText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +26,13 @@ public class AboutMe extends AppCompatActivity {
         setContentView(R.layout.activity_about_me);
 
         beginButton = (Button) findViewById(R.id.beginButton);
+        animeButton = (Button) findViewById(R.id.animeButton);
+        gameButton = (Button) findViewById(R.id.gameButton);
+        jobButton = (Button) findViewById(R.id.jobButton);
+        kpopButton = (Button) findViewById(R.id.kpopButton);
         artText = (TextView) findViewById(R.id.artText);
+
+
 
         setupListeners();
 
@@ -48,22 +60,38 @@ public class AboutMe extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
 
         private void changeVisibility()
     {
         artText.setVisibility(View.GONE);
+        if(artText.getVisibility() == View.GONE)
+        {
+            artText.setVisibility(View.VISIBLE);
+
+        }
+        else
+        {
+            artText.setVisibility(View.GONE);
+        }
+
+
     }
+
 
         private void setupListeners()
-    {
-        beginButton.setOnClickListener(new View.onClickListener()
         {
-            @Override
-            public void onClick(View buttonView)
+            beginButton.setOnClickListener(new View.OnClickListener()
             {
+                @Override
+                public void onClick (View buttonView)
+                {
+                    changeVisibility();
+                }
 
-            }
-        });
-    }
-
+            });
+        }
 }
+
+
