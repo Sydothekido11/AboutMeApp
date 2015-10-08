@@ -14,41 +14,42 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Begin"
-        android:id="@+id/beginButton"
-        android:layout_below="@+id/artText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="91dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/artText"
         android:text="I consider myself very artistic and creative, so in my free time (which is rare) I paint or draw. Usually my projects are all fan art of my favorite movies, animes, video games etc. I specialize in colored pencils mostly, but every now and then I use acrylic paints."
-        android:layout_below="@+id/textView"
+        android:textColor="#0e0e0e"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="56dp"
-        android:textColor="black" />
+        android:layout_above="@+id/artButton"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Art"
+        android:id="@+id/artButton"
+        android:layout_marginBottom="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Anime"
         android:id="@+id/animeButton"
-        android:layout_alignTop="@+id/beginButton"
-        android:layout_toRightOf="@+id/beginButton"
-        android:layout_toEndOf="@+id/beginButton" />
+        android:layout_alignTop="@+id/artButton"
+        android:layout_toRightOf="@+id/artButton"
+        android:layout_toEndOf="@+id/artButton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Video Games"
-        android:id="@+id/gameButton"
+        android:id="@+id/gamesButton"
         android:layout_alignTop="@+id/animeButton"
         android:layout_toRightOf="@+id/animeButton"
         android:layout_toEndOf="@+id/animeButton" />
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:text="Job"
         android:id="@+id/jobButton"
-        android:layout_below="@+id/beginButton"
+        android:layout_below="@+id/animeButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -70,5 +71,16 @@
         android:layout_alignBottom="@+id/jobButton"
         android:layout_toRightOf="@+id/jobButton"
         android:layout_toEndOf="@+id/jobButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/animeText"
+        android:text="Anime is a huge part of my life now. The only thing I watch is anime(or the occasional Korean drama). It has influenced me to take on learning Japanese and to study abroad in Japan during my 2nd year of college. My favorite animes are: Tokyo Ghoul, Durarara(pictured below), Your Lie in April, and Kill La Kill. "
+        android:textSize="15dp"
+        android:layout_above="@+id/artButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
 
 </RelativeLayout>

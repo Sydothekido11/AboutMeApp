@@ -13,26 +13,26 @@ import android.view.View;
 
 public class AboutMe extends AppCompatActivity {
 
-    private Button beginButton;
+    private Button artButton;
     private Button animeButton;
-    private Button gameButton;
+    private Button gamesButton;
     private Button jobButton;
     private Button kpopButton;
     private TextView artText;
+    private TextView animeText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
 
-        beginButton = (Button) findViewById(R.id.beginButton);
+        artButton = (Button) findViewById(R.id.artButton);
         animeButton = (Button) findViewById(R.id.animeButton);
-        gameButton = (Button) findViewById(R.id.gameButton);
+        gamesButton = (Button) findViewById(R.id.gamesButton);
         jobButton = (Button) findViewById(R.id.jobButton);
         kpopButton = (Button) findViewById(R.id.kpopButton);
         artText = (TextView) findViewById(R.id.artText);
-
-
+        animeText = (TextView) findViewById(R.id.animeText);
 
         setupListeners();
 
@@ -63,18 +63,33 @@ public class AboutMe extends AppCompatActivity {
     }
 
 
-        private void changeVisibility()
+        private void changeArtVisibility()
     {
-        artText.setVisibility(View.GONE);
-        if(artText.getVisibility() == View.GONE)
-        {
-            artText.setVisibility(View.VISIBLE);
 
-        }
-        else
+        if(artText.getVisibility() == View.VISIBLE)
         {
             artText.setVisibility(View.GONE);
         }
+        else
+        {
+            artText.setVisibility(View.VISIBLE);
+        }
+
+        private void changeAnimeVisibility()
+    {
+        if(animeText.getVisibility() == View.VISIBLE)
+        {
+            animeText.setVisibility(View.GONE);
+        }
+        else
+        {
+            animeText.setVisibility(View.VISIBLE);
+        }
+    }
+
+
+
+
 
 
     }
@@ -82,14 +97,19 @@ public class AboutMe extends AppCompatActivity {
 
         private void setupListeners()
         {
-            beginButton.setOnClickListener(new View.OnClickListener()
-            {
+            artButton.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick (View buttonView)
-                {
-                    changeVisibility();
+                public void onClick(View buttonView) {
+                    changeArtVisibility();
                 }
 
+            });
+            animeButton.setOnClickListener(new View.OnClickListener()
+            {
+                public void onClick(View buttonView)
+                {
+                    changeAnimeVisibility();
+                }
             });
         }
 }
