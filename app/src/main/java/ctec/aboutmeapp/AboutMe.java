@@ -20,6 +20,9 @@ public class AboutMe extends AppCompatActivity {
     private Button kpopButton;
     private TextView artText;
     private TextView animeText;
+    private TextView gamesText;
+    private TextView jobText;
+    private TextView kpopText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,9 @@ public class AboutMe extends AppCompatActivity {
         kpopButton = (Button) findViewById(R.id.kpopButton);
         artText = (TextView) findViewById(R.id.artText);
         animeText = (TextView) findViewById(R.id.animeText);
+        gamesText = (TextView) findViewById(R.id.gamesText);
+        jobText = (TextView) findViewById(R.id.jobText);
+        kpopText = (TextView) findViewById(R.id.kpopText);
 
         setupListeners();
 
@@ -87,12 +93,46 @@ public class AboutMe extends AppCompatActivity {
         }
     }
 
+        private void changeGamesVisibility()
+        {
+            if(gamesText.getVisibility() == View.VISIBLE)
+            {
+                gamesText.setVisibility(View.GONE);
+            }
+            else
+            {
+                gamesText.setVisibility(View.VISIBLE);
+            }
+        }
+
+        private void changeJobVisibility()
+        {
+            if(jobText.getVisibility() == View.VISIBLE)
+            {
+                jobText.setVisibility(View.GONE);
+            }
+            else
+            {
+                jobText.setVisibility(View.VISIBLE);
+            }
+        }
+
+        private void changeKpopVisibility()
+        {
+            if(kpopText.getVisibility() == View.VISIBLE)
+            {
+                kpopText.setVisibility(View.GONE);
+            }
+            else
+            {
+                kpopText.setVisibility(View.VISIBLE);
+            }
+        }
 
 
 
 
 
-    }
 
 
         private void setupListeners()
@@ -109,6 +149,34 @@ public class AboutMe extends AppCompatActivity {
                 public void onClick(View buttonView)
                 {
                     changeAnimeVisibility();
+                }
+            });
+
+            gamesButton.setOnClickListener(new View.OnClickListener()
+            {
+
+                public void onClick(View buttonView)
+                {
+                    changeGamesVisibility();
+                }
+
+            });
+
+            jobButton.setOnClickListener(new View.OnClickListener()
+            {
+
+                public void onClick(View buttonView)
+                {
+                    changeJobVisibility();
+                }
+            });
+
+            kpopButton.setOnClickListener(new View.OnClickListener()
+            {
+
+                public void onClick(View buttonView)
+                {
+                    changeKpopVisibility();
                 }
             });
         }

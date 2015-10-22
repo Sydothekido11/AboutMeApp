@@ -83,4 +83,40 @@
         android:layout_alignParentEnd="true"
         android:visibility="gone" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Video games are the reason I decided to get into computer programming. I started playing them when I was 6 and would watch my dad play Ocarina of Time or Majoras Mask and finally when I turned 8 the first game I played and completed was Ninja Gaiden (pictured below). My favorites are: Legend of Zelda, God of War, Dead Space, Ninja Gaiden, Dishonored and Bioshock."
+        android:id="@+id/gamesText"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/gamesButton"
+        android:layout_alignEnd="@+id/gamesButton"
+        android:textColor="#010101"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I work at Cowabunga Bay in Draper. I am a lifeguard there, which means I watch the lazy river and manage the waterslides. It certainly isn’t the most exciting job in the world but you get tan and good money. My job really helped me come out of my shell. I’ve always been an extremely shy and  self-conscious person through out my entire life, but taking up this summer job made me socialize with other people and its really been a life saver.  (pun intended) "
+        android:id="@+id/jobText"
+        android:layout_above="@+id/artButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#010101"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Korean pop is the only thing I listen to, it was formerly heavy metal. I don’t think you need to understand what they are saying to enjoy the music; I think the message of the song is displayed well enough through the emotion and beat. My favorite groups are: BIGBANG, SHINee, BTS, EXO, Block B, MBLAQ and 2ne1."
+        android:id="@+id/kpopText"
+        android:layout_above="@+id/artButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="15dp"
+        android:textColor="#010101"
+        android:visibility="gone" />
+
 </RelativeLayout>
